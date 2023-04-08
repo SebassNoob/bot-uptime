@@ -38,7 +38,7 @@ export default function Main(){
                                 </p>
                                 
                             </div>
-                            <p className={[styles.boxDescription, styles.hidden].join(' ')}>View the bot's uptime statistics here!</p>
+                            <p className={[styles.boxDescription, styles.hidden].join(' ')}>View the bot&apos;s uptime statistics here!</p>
                         </div>
 
                         
@@ -56,14 +56,14 @@ export default function Main(){
                         </div>
                     </div>
                     <div className={[styles.box, styles.box3].join(' ')}>
-                    <div className={styles.boxContent}>
-                        <div className={styles.uptimeIcon}>
-                            <p className={styles.uptimeLabel} >
-                                <FontAwesomeIcon icon={faQuestionCircle}/> FAQS
+                        <div className={styles.boxContent}>
+                            <div className={styles.uptimeIcon}>
+                                <p className={styles.uptimeLabel} >
+                                    <FontAwesomeIcon icon={faQuestionCircle}/> FAQS
+                                            
+                                </p>
                                         
-                            </p>
-                                    
-                        </div>
+                            </div>
                             <p className={[styles.boxDescription, styles.hidden].join(' ')}>Answering frequently asked questions regarding annoybot and its operation</p>
                         </div>
                     </div>
