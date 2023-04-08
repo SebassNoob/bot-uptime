@@ -1,0 +1,135 @@
+.hidden{
+    opacity:0;
+    display: none;
+}
+.pageContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.boxContainer{
+    flex:2;
+    display:grid;
+    margin:5%;
+    gap:10%;
+    grid-column-gap: 5%;
+    grid-template-columns: 1fr 1fr;
+}
+.box1{
+    grid-column: 1 / span 2;
+    aspect-ratio: 5; 
+}
+.box2{
+    grid-row: 2 / span 1;
+    aspect-ratio: 1;
+}
+.box3{
+    grid-row: 2 / span 1;
+    aspect-ratio: 1;
+}
+
+.box{
+    border-radius:0.75em;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 150%;
+    position: relative;
+    cursor:pointer;
+    
+}
+.box:before {
+    background: linear-gradient(
+      45deg,
+      transparent 5%,
+      rgb(206, 59, 14) 50%,
+      transparent 99%
+    );
+    border-radius: inherit;
+    content: "";
+    inset: 0px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 500ms;
+    
+}
+.box:hover:before {
+    opacity: 1;
+}
+.box:hover > .boxContent > .uptimeIcon {
+    
+    opacity: 1;
+    transform: scale(1.01) translateY(-10%);
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.box:hover > .boxContent > .boxDescription {
+    display: flex;
+    opacity: 1;
+    
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+.uptimeLabel{
+    font-weight: 500;
+    display:flex;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+}
+.uptimeIcon{
+    
+    color: rgba(255, 255, 255, 0.25);
+  
+    opacity: 0.9;
+    font-size:130%;
+    
+    
+    place-self: center;
+    transition: transform 250ms, opacity 250ms;
+    
+}
+.boxDescription{
+    
+    font-size: 4vh;
+    
+    justify-content: center;
+    align-items: center;
+}
+.boxContent{
+    
+    
+    background-color: rgb(30,30,30);
+    border-radius: inherit;
+    display: grid;
+    inset: 1px;
+    padding: 1em;
+    position: absolute;
+    
+    z-index:0;
+    
+}
+.logo{
+    
+    flex:1;
+}
+
+.logoImage{
+    margin-left: auto;
+    margin-right: auto;
+}
+.logoText{
+    font-size: 300%;
+    
+    background: linear-gradient(
+        to bottom right, #cc0000,#bb8888, #dddddd
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
