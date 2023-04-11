@@ -1,16 +1,33 @@
+
 .hidden{
     opacity:0;
-    display: none;
+    display:flex;
 }
 .pageContainer{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
+.buttonLink{
+    
+    color: white;
+    border-radius: 6%;
+    text-align: center;
+    
+    display: inline-block;
+
+}
+.buttonLink:hover{
+    background-color: #ccc;
+    color: black;
+    transition: background-color 250ms linear;
+}
+
 .boxContainer{
     flex:2;
     display:grid;
-    margin:5%;
+    margin:2%;
     gap:10%;
     grid-column-gap: 5%;
     grid-template-columns: 1fr 1fr;
@@ -21,11 +38,11 @@
 }
 .box2{
     grid-row: 2 / span 1;
-    aspect-ratio: 1;
+    aspect-ratio: 3/2;
 }
 .box3{
     grid-row: 2 / span 1;
-    aspect-ratio: 1;
+    aspect-ratio: 3/2;
 }
 
 .box{
@@ -65,7 +82,7 @@
 }
 
 .box:hover > .boxContent > .boxDescription {
-    display: flex;
+    
     opacity: 1;
     
     align-items: center;
@@ -95,8 +112,8 @@
 }
 .boxDescription{
     
-    font-size: 4vh;
-    
+    font-size: 50%;
+    color:#ccc;
     justify-content: center;
     align-items: center;
 }
@@ -113,18 +130,50 @@
     z-index:0;
     
 }
-.logo{
-    
+
+
+
+
+.right{
     flex:1;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
 }
 
+.blurb{
+    grid-row: 2;
+}
+.blurbText{
+    font-size: 150%;
+    color: #ccc;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+
+
+
+.logoImageContainer{
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.logo{
+    
+    grid-row: 1;
+    display:flex;
+    align-items: center;
+}
 .logoImage{
-    margin-left: auto;
-    margin-right: auto;
+
+    border-radius: 50%;
+    
 }
 .logoText{
     font-size: 300%;
-    
+    margin-left: 3%;
     background: linear-gradient(
         to bottom right, #cc0000,#bb8888, #dddddd
     );

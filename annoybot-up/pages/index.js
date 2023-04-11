@@ -11,13 +11,33 @@ const Logo = ()=>{
         <Image
             className = {styles.logoImage}
             src="/images/annoybot.jpeg"
-            height={100}
-            width={100}
+            width={80}
+            height={80}
             alt="annoybot"
         />
+        
     )
 }
 
+const Box = ({name ='',style = '', icon = '', desc = ''})=>{
+    // props: style: styles.box(n), icon: fa... , desc: (string)
+    
+    return(
+        <div className={`${styles.box} ${style}`}>
+            <div className={styles.boxContent}>
+                <div className={styles.uptimeIcon}>
+                    <p className={styles.uptimeLabel} >
+                        <FontAwesomeIcon icon={icon}/> {name}
+                                        
+                    </p>
+                                    
+                </div>
+                <p className={`${styles.boxDescription} ${styles.hidden}`}>{desc}</p>
+            </div>
+        </div>
+
+    )
+}
 
 export default function Main(){
 
@@ -25,57 +45,30 @@ export default function Main(){
         <>
         <Head>
             <title>Main</title>
+
         </Head>
         <main>
             <div className={styles.pageContainer}>
                 <div className={styles.boxContainer}>
-                    <div className={[styles.box, styles.box1].join(' ')}>
-                        <div className={styles.boxContent}>
-                            <div className={styles.uptimeIcon}>
-                                <p className={styles.uptimeLabel} >
-                                    <FontAwesomeIcon icon={faChartSimple}/> UPTIME
-                                    
-                                </p>
-                                
-                            </div>
-                            <p className={[styles.boxDescription, styles.hidden].join(' ')}>View the bot&apos;s uptime statistics here!</p>
-                        </div>
-
+                    <Box name ='UPTIME' style={styles.box1} icon={faChartSimple} desc='View annoybot&apos;s uptime statistics here!'/>
+                    <Box name ='ABOUT' style={styles.box2} icon={faBookOpen} desc='Learn more about annoybot: Its features, history, and development!'/>
+                    <Box name ='LEGAL DOCS' style={styles.box3} icon={faQuestionCircle} desc='Legal documentation that you agree to when you use annoybot. Contains the TOS, privacy policy and licence.'/>
+                    
+                </div>
+                
+                
+                <div className={styles.right}>
+                    <div className={styles.logo}>
+                        <Logo/>
                         
+                        <p className={styles.logoText}>annoybot</p>
                     </div>
-                    <div className={[styles.box, styles.box2].join(' ')}>
-                        <div className={styles.boxContent}>
-                            <div className={styles.uptimeIcon}>
-                                <p className={styles.uptimeLabel} >
-                                        <FontAwesomeIcon icon={faBookOpen}/> ABOUT
-                                        
-                                </p>
-                                    
-                            </div>
-                            <p className={[styles.boxDescription, styles.hidden].join(' ')}>Learn more about annoybot: Its features, history, and development!</p>
-                        </div>
+                    <div className={styles.blurb}>
+                        <p className={styles.blurbText}><span className={styles.buttonLink}><a href="https://discord.com/api/oauth2/authorize?client_id=844757192313536522&permissions=1507264163186&scope=applications.commands%20bot">annoybot</a></span>: A bot built with <span className={styles.buttonLink}><a href="hhttps://pypi.org/project/discord.py/">Discord.py</a></span> that annoys your friends. Hands down the best way to mess with them online. Hosted by <span className={styles.buttonLink}><a href="https://replit.com">Replit</a></span>.</p>
                     </div>
-                    <div className={[styles.box, styles.box3].join(' ')}>
-                        <div className={styles.boxContent}>
-                            <div className={styles.uptimeIcon}>
-                                <p className={styles.uptimeLabel} >
-                                    <FontAwesomeIcon icon={faQuestionCircle}/> FAQS
-                                            
-                                </p>
-                                        
-                            </div>
-                            <p className={[styles.boxDescription, styles.hidden].join(' ')}>Answering frequently asked questions regarding annoybot and its operation</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 
-                
-                <div className={styles.logo}>
-                    
-                    <Logo/>
-                    
-                    <p className={styles.logoText}>AnnoyBot</p>
-                </div>
             </div>
             
         </main>
